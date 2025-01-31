@@ -12,7 +12,17 @@
         <h1 id="sizeText"></h1>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+		function updateSize() {
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    document.getElementById("sizeText").textContent = `Width: ${width} and Height: ${height}`;
+}
+
+window.addEventListener("resize", updateSize);
+updateSize();
+
+	</script>
 
 </body>
 </html>
